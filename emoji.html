@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="emoji.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="static">
+        <h1>Emoji Application 🔍😍😮😎
+        </h1>
+        <div class="inputs">
+            <div class="btns">
+                <button data-category="all">All</button>
+                <button data-category="face">Faces😄</button>
+                <button data-category="hand">Hands👌</button>
+                <button data-category="sport">Sports🏅</button>
+                <button data-category="Nature">Animals🦌 & Nature🌻</button>
+                <button data-category="food">Food🥘</button>
+                <button data-category="heart">Hearts💖</button>
+                <button data-category="flag">Flags🚩</button>
+            </div>
+            <form action="">
+                <input type="text" placeholder="// Search using Description" class="search_field">
+            </form>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="dynamic">
+        <div class="emoji_container">
+        </div>
+    </div>
+
+    <div class="popup">
+        <span class="popup_emoji"></span>
+        <button class="copy_button"></button>
+        <button class="close_btn">❌</button>
+    </div>
+
+    <script src="emoji.js"></script>
+    <script src="emojis.js"></script>
+</body>
+</html>
