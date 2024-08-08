@@ -1,0 +1,174 @@
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #064041;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        section {
+            width: 90%;
+            max-width: 800px;
+            background-color: rgb(240, 228, 228);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 10px;
+        }
+
+        /* Section 1: Form Styles */
+        .section1 {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .section1 h1 {
+            /* margin-bottom: 20px; */
+            font-size: 50px;
+            color: #333;
+            text-align: center;
+        }
+
+        .section1 form {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr) 40px;
+            gap: 10px;
+        }
+
+        .section1 input {
+            padding: 10px;
+    border-radius: 4px;
+    border: 5px solid #8e8a8a;
+    font-size: 13px;
+    width: 75%;
+        }
+
+        .section1 button {
+            grid-column: span 2;
+            padding: 10px;
+            background-color: #0f8535;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .section1 button:hover {
+            background-color: #27b153;
+        }
+
+        /* Section 2: Player Data Display */
+        .section2 {
+            padding: 20px;
+        }
+
+        .button_group {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr) 40px 40px;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 2px solid #032b07;
+            border-radius: 4px;
+            background-color: #56b68e;
+        }
+
+        .button_group span {
+            font-weight: 900;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .button_group button {
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            color: white;
+        }
+
+        .button_group .del {
+            background-color: #dc3545;
+        }
+
+        .button_group .del:hover {
+            background-color: #c82333;
+        }
+
+        .button_group .but1 {
+            background-color: #063611;
+        }
+
+        .button_group .but1:hover {
+            background-color: #218838;
+        }
+
+        .button_group .but2 {
+            background-color: #71055e;
+        }
+
+        .button_group .but2:hover {
+            background-color: #c858b6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .section1 h1{
+                font-size: 26px;
+            }
+            .section1 form {
+                /* grid-template-columns: 1fr; */
+                display: block;
+        margin: 30px;
+            }
+            .section1 input {
+                padding: 9px;
+                margin: 2px;
+            }
+
+            .button_group {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas: 
+                    "fname lname country"
+                    "score score score"
+                    "add del sub";
+            }
+
+            .button_group span:nth-child(1) {
+                grid-area: fname;
+            }
+
+            .button_group span:nth-child(2) {
+                grid-area: lname;
+            }
+
+            .button_group span:nth-child(3) {
+                grid-area: country;
+            }
+
+            .button_group span:nth-child(4) {
+                grid-area: score;
+            }
+
+            .button_group .but1 {
+                grid-area: add;
+            }
+
+            .button_group .but2 {
+                grid-area: sub;
+            }
+
+            .button_group .del {
+                grid-area: del;
+            }
+        }
