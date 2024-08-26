@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0000F5;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #logo {
+            display: inline-block;
+        }
+
+        #logo1 {
+            color: white;
+            text-decoration: none;
+        }
+
+        #signupContainer {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #0000F5;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3333ff;
+        }
+
+        #signupError {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="./test5.html" id="logo1">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="http://www.w3.org/2000/svg" width="24px" fill="#ffffff">
+                    <path d="M480-160q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q58 0 113.5 15T480-740v484q51-32 107-48t113-16q36 0 70.5 6t69.5 18v-480q15 5 29.5 10.5T898-752q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59Zm80-200v-380l200-200v400L560-360Zm-160 65v-396q-33-14-68.5-21.5T260-720q-37 0-72 7t-68 21v397q35-13 69.5-19t70.5-6q36 0 70.5 6t69.5 19Zm0 0v-396 396Z"/>
+                </svg>
+                <span class="dlText">Books</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div id="signupContainer">
+            <h1>Sign Up</h1>
+            <form id="signupForm">
+                <label for="signupUsername">Username:</label>
+                <input type="text" id="signupUsername" name="username" required>
+                <label for="signupEmail">Email:</label>
+                <input type="email" id="signupEmail" name="email" required>
+                <label for="signupPassword">Password:</label>
+                <input type="password" id="signupPassword" name="password" required>
+                <button type="submit">Sign Up</button>
+                <p id="signupError" style="color:red; display:none;">Error signing up</p>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Get form values
+            const username = document.getElementById('signupUsername').value;
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+
+            // Store data in local storage
+            localStorage.setItem('username', username);
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
+
+            // Optionally, you can show a success message or redirect
+            alert('Sign up successful!');
+            window.location.href = 'login.html'; // Redirect to login page
+        });
+    </script>
+</body>
+</html>
